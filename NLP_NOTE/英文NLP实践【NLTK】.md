@@ -1,4 +1,4 @@
-# Welcome to My Space
+# 英文NLP实践【NLTK】
 
 在**海外舆情监控**项目的契机下，通过不断的遇到问题，再解决问题的过程中，发现了一些好玩的文本处理方法和一些实用的工具。所以写在这里当作分享的同时，也当作是自己的一个备忘录。 由于游戏聊天是一个多语种的环境，针对不同语言的处理逻辑和技巧也不尽相同。今天先总结的是**英文**，后续会陆陆续续更新**中文、日文、韩语**等其他语种。选择的分析工具是`NLTK`（ps：`NLTK`不支持中文），下文中展示的代码例子也是通过`NLTK`来实践的。
 
@@ -82,11 +82,11 @@ print(nltk.wordpunct_tokenize('19~'))
 ```
 
 > ['is', "n't"]
-
+>
 > ['isn', "'", 't']
-
+>
 > ['19~']
-
+>
 > ['19', '~']
 
 总的来说，`wordpunct_tokenize`的颗粒度更细，但是也容易分错词。	`word_tokenize`除了符号粘连处理不好之外，效果更好。同时`NLTK`工具支持选择指定分词器，可以通过`dir(nltk.tokenize)` 进行选择。
@@ -154,7 +154,7 @@ print(lemmatizer.lemmatize('cookbooks',pos=’n’))
 ```
 
 > cook
-
+>
 > cookbook
 
 b.     词干提取`nltk.stem.PorterStemmer`:
@@ -192,4 +192,3 @@ c.     **停用词过滤**
 [ Natural Language Toolkit](https://www.nltk.org)
 
 最新更新于 2021.12.29
-
