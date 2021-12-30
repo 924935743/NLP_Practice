@@ -15,7 +15,7 @@
 
 在分析之前，应当有意识的维护一套自己的**用户词典**，可以让运营同事提供游戏专业名词，这些词也往往是运营同事比较关注的重点词汇，这些词汇在市面上的分词工具中是比较难准确切割的。同时，寻找合适的*stopwords***停用词词典**，对后续的分词结果再做一层过滤。字典最好有一个**标准化**的格式，后续后新的用途可以灵活的使用。目前我的字典按照下面这个格式进行整理：
 
-![](blob:https://markdown.lovejade.cn/76784b18-5c3e-4722-9786-2447f9dec21e)
+![](./md_png/Picture1.png)
 
 ```mermaid
 graph TD;
@@ -23,7 +23,7 @@ graph TD;
  文本预处理-->语种判别; 
 语种判别-->分词-词性标注;
  分词-词性标注-->分块切词 & 词形还原 & 词干提取;
-分块切词 & 词形还原 & 词干提取-->结果过滤 ;
+分块切词 & 词形还原 & 词干提取-->结果过滤;
 ```
 
 ## 文本预处理
@@ -95,7 +95,7 @@ print(nltk.wordpunct_tokenize('19~'))
 
 `nltk.pos_tag`支持对分好的token进行词性标注。词性大类如下图总结，重点关注名词**NN***，形容词**JJ***，动词**V***，副词**RB***。
 
-![](blob:https://markdown.lovejade.cn/849129e9-616b-4d9f-bc0d-544c4aa83e24)
+![](./md_png/Picture2.png)
 
 ## 分块切词
 
@@ -136,7 +136,8 @@ print(chunk_res)
 
 > [('hello world', 'cu'), ('buy this book', 'cu')]
 
-![](blob:https://markdown.lovejade.cn/5d391aae-d73b-4768-b539-2e6d5d24b71b)
+![](./md_png/Picture3.png)
+
 可以看到`hello world`和'buy this book`短语有划分出来。
 
 ## 词形还原 & 词干提取
@@ -183,7 +184,7 @@ c.     **停用词过滤**
 
 ## 附件
 
-![](blob:https://markdown.lovejade.cn/ab422f0e-0d34-432f-b64d-ffc3f087dc64)
+![](./md_png/Picture4.png)
 
 ## 参考
 
